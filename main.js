@@ -9,7 +9,9 @@ weatherForm.addEventListener("submit", (e) => {
 
 function getWeather(city) {
   weatherResults.innerHTML = `<div class="loading"></div>`;
-  fetch(`https://proxy-server-book.vercel.app/weather-data?${city}`)
+  fetch(
+    `https://proxy-server-mzksoups-projects.vercel.app/weather-data?${city}`
+  )
     .then((response) => response.json())
     .then((jsonData) =>
       (weatherResults.innerHTML = `
